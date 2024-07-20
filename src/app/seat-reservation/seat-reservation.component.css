@@ -1,0 +1,102 @@
+/* Container for the seat reservation layout */
+.seat-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Seat layout container */
+.seat-layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 60%;
+}
+
+/* Individual seat styling */
+.seat-layout div {
+    width: 50px; /* Adjusted width for better visibility */
+    height: 50px; /* Adjusted height for better visibility */
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Reserved seat styling */
+.reserved {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+/* Available seat styling */
+.available {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+/* Hover effect for seats */
+.seat-layout div:hover {
+    opacity: 0.8;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+/* Input styling */
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    /* Seat layout container */
+.seat-layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: auto;
+}
+
+/* Individual seat styling */
+.seat-layout div {
+    width: 40px; /* Smaller width for mobile */
+    height: 40px; /* Smaller height for mobile */
+    font-size: 12px; /* Smaller font size for mobile */
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+}

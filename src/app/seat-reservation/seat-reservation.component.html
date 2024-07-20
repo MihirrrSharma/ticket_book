@@ -1,0 +1,14 @@
+<div class="seat-container">
+    <h2>Seat Reservation</h2>
+    <input type="number" [(ngModel)]="numSeats" placeholder="Enter number of seats" />
+    <button (click)="bookSeats()">Book Seats</button>
+    <p>{{ message }}</p>
+  
+    <div class="seat-layout">
+        <ng-container *ngFor="let row of getRows(); let i = index">
+            <div *ngFor="let seat of row" [ngClass]="{'reserved': seat.reserved, 'available': !seat.reserved}">
+                {{ seat.seatNumber }}
+            </div>
+        </ng-container>
+    </div>
+</div>
